@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+nav {
+  height: 10vh;
+  background-color: #446ffd;
+}
+
+nav .nav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  width: 50%;
+  height: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+}
+
+nav .nav-link a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "san-serif";
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: relative;
+  }
+  nav .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    -webkit-transform: translate(-5%, -50%);
+            transform: translate(-5%, -50%);
+    z-index: 2;
+  }
+  nav .line {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin: 5px;
+  }
+  nav .nav-link {
+    position: fixed;
+    background-color: #446ffd;
+    height: 100vh;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    clip-path: circle(100px at 90% -10%);
+    -webkit-clip-path: circle(100px at 90% -10%);
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+  nav .nav-link li {
+    opacity: 0;
+  }
+  nav .nav-link li a {
+    font-size: 25px;
+  }
+  nav .nav-link li:nth-child(1) {
+    -webkit-transition: all 0.5s ease 0.2s;
+    transition: all 0.5s ease 0.2s;
+  }
+  nav .nav-link li:nth-child(2) {
+    -webkit-transition: all 0.5s ease 0.4s;
+    transition: all 0.5s ease 0.4s;
+  }
+  nav .nav-link li:nth-child(3) {
+    -webkit-transition: all 0.5s ease 0.6s;
+    transition: all 0.5s ease 0.6s;
+  }
+  nav .nav-link li.fade {
+    opacity: 1;
+  }
+  nav .nav-link.open {
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+  }
+}
+
+.landing {
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.landing h1 {
+  margin: 100px;
+  font-size: 50px;
+  color: blueviolet;
+}
+
+@media (max-width: 768px) {
+  .landing {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=navStyle.css.map */
