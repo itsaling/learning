@@ -1,22 +1,15 @@
-@import url("https://fonts.googleapis.com/css?family=Griffy&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.stars {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  opacity: 0;
-  animation: flicker 1s ease infinite alternate;
-}
+
 .preload {
   position: fixed;
   width: 100%;
   height: 100vh;
   background-color: #1f248b;
-  background-image: url("/preloadwitch/assets/bg1.png");
+  background-image: url("/preloadwitch/assets/bg.svg");
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -29,14 +22,28 @@
     font-family: "Griffy", cursive;
     animation: flicker 1.5s ease infinite alternate;
   }
+  .bg {
+    width: 100%;
+  }
+  .stars {
+    top: 0;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    animation: flicker 1s ease infinite alternate;
+  }
+  .witch {
+    z-index: 3;
+    position: absolute;
+    width: 310px;
+    top: 20%;
+    animation: witch 1.2s ease infinite alternate;
+  }
 }
 
-.witch {
-  z-index: 3;
-  position: absolute;
-  width: 310px;
-  top: 20%;
-  animation: witch 1.2s ease infinite alternate;
+.preload-finish {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .cloud1,
@@ -44,7 +51,6 @@
 .cloud3 {
   position: absolute;
   width: 300px;
-  z-index: -1;
   right: 0%;
 }
 
