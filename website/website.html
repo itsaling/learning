@@ -5,33 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./css/website.css" />
-    <title>My website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+    <title>Morphing page transition</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="nav-links">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-        </div>
-        <div class="hamburger">
-          <img src="./assets/menu.png" alt="" />
-        </div>
-      </nav>
-    </header>
-    <section>
-      <div class="hero">
-        <img src="" alt="" />
-      </div>
+    <svg
+      id="morph"
+      xmlns="http://www.w3.org/2000/svg"
+      width="100%"
+      height="100vh"
+      viewBox="0 0 1440 1024"
+      preserveAspectRatio="none"
+    >
+      <path
+        class="morph"
+        d="M0 1V0H1441V1C1311.5 1 1225.6 1 1120 1C988 1 864.5 1 751.5 1C638.5 1 460.5 1 295 1C162.6 1 77 1 0 1Z"
+        fill="#ffbcbc"
+      />
+    </svg>
+
+    <section id="sect1">
+      <h1 id="headerClick">Give me a click</h1>
+      <p>Go on, go already!</p>
+      <button id="btn-click">Tap Tap</button>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+    <section id="sect2">
+      <button id="btn2-click">Go Back!</button>
+    </section>
+
     <script src="/SunMorphing/anime.min.js"></script>
-    <script src="./website.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

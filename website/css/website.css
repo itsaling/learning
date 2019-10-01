@@ -1,1 +1,73 @@
-/* No CSS *//*# sourceMappingURL=website.css.map */
+body,
+html {
+  background-color: #f8dede;
+  width: 100%;
+  height: 100%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 5em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#morph {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+section {
+  position: absolute;
+}
+
+section h1 {
+  font-size: 3em;
+  margin: 0;
+  padding: 0;
+}
+
+section p {
+  font-size: 1.4em;
+  margin: 10px 0;
+}
+
+section button {
+  background-color: #c86363;
+  margin-top: 20px;
+  border: none;
+  color: #fff;
+  padding: 1em;
+  border-radius: 5px;
+  width: 40%;
+  cursor: pointer;
+}
+
+section button#btn2-click {
+  background: none;
+  font-size: 3em;
+  font-family: serif;
+}
+
+section button#btn2-click:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#sect2 {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  width: 50%;
+}
+
+.display {
+  display: block !important;
+}
+
+.pointer {
+  pointer-events: auto !important;
+}
+/*# sourceMappingURL=website.css.map */
