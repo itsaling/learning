@@ -5,6 +5,20 @@
           box-sizing: border-box;
 }
 
+#morph {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.pointer {
+  pointer-events: auto !important;
+}
+
 .preload {
   position: fixed;
   width: 100%;
@@ -92,8 +106,160 @@
           animation: clouds 3s ease infinite 1.5s;
 }
 
-section img {
-  height: 200px;
+section#pumkins {
+  background-image: url("/preloadwitch/assets/bg/bg.svg");
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+section#pumkins h3 {
+  font-family: "Griffy", cursive;
+  z-index: 6;
+  position: absolute;
+  top: 10%;
+  font-size: 4em;
+  color: #000;
+  width: 100%;
+  text-align: center;
+  -webkit-animation: flipInY 3s;
+          animation: flipInY 3s;
+}
+
+section#pumkins button#enter {
+  font-family: "Griffy", cursive;
+  padding: 0.5em;
+  background-color: #000;
+  border: none;
+  border-radius: 50%;
+  color: green;
+  position: absolute;
+  font-size: 3em;
+  top: 30%;
+  margin-left: 46%;
+  z-index: 5;
+}
+
+section#pumkins button#enter:hover {
+  color: orange;
+  cursor: pointer;
+  -webkit-animation: shake 1s infinite;
+          animation: shake 1s infinite;
+}
+
+section#pumkins button#enter:focus {
+  outline: none;
+}
+
+section#pumkins .moon {
+  position: absolute;
+  top: 10%;
+  margin-left: 25%;
+  width: 50%;
+  z-index: -1;
+}
+
+section#pumkins .glow1 {
+  position: absolute;
+  top: 10%;
+  margin-left: 25%;
+  width: 50%;
+  z-index: -2;
+  -webkit-animation: grow 1.3s ease infinite alternate;
+          animation: grow 1.3s ease infinite alternate;
+}
+
+section#pumkins .ground {
+  z-index: 0;
+  margin-top: -15%;
+  width: 110%;
+}
+
+section#pumkins .grass {
+  position: absolute;
+  z-index: -1;
+  top: 22%;
+  margin-left: -10%;
+}
+
+section#pumkins .pumpkins {
+  position: absolute;
+  z-index: 4;
+  top: 8%;
+  -webkit-animation: pumpkins 3s ease infinite alternate;
+          animation: pumpkins 3s ease infinite alternate;
+}
+
+section#pumkins .pumpkin1 {
+  position: absolute;
+  z-index: 4;
+  top: 70%;
+  width: 15%;
+  -webkit-animation: jello 5s ease infinite alternate;
+          animation: jello 5s ease infinite alternate;
+}
+
+section#pumkins .pumpkin2 {
+  position: absolute;
+  z-index: 4;
+  top: 65%;
+  margin-left: 70%;
+  width: 15%;
+  -webkit-animation: tada 3s ease infinite alternate;
+          animation: tada 3s ease infinite alternate;
+}
+
+section#pumkins .star1 {
+  z-index: -1;
+  -webkit-animation: flicker 1s ease infinite alternate;
+          animation: flicker 1s ease infinite alternate;
+}
+
+@-webkit-keyframes grow {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+}
+
+@keyframes grow {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+}
+
+@-webkit-keyframes shake {
+  from {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  to {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
+}
+
+@keyframes shake {
+  from {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  to {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
 }
 
 @-webkit-keyframes witch {
@@ -151,6 +317,28 @@ section img {
   }
   to {
     opacity: 3;
+  }
+}
+
+@-webkit-keyframes pumpkins {
+  from {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  to {
+    -webkit-transform: translateY(3%);
+            transform: translateY(3%);
+  }
+}
+
+@keyframes pumpkins {
+  from {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  to {
+    -webkit-transform: translateY(3%);
+            transform: translateY(3%);
   }
 }
 /*# sourceMappingURL=witch.css.map */
